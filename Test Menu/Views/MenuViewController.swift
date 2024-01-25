@@ -47,10 +47,7 @@ class ViewController: UIViewController {
     }()
     
     private var menuArray = [MenuModelListItem]()
-    private var menuArray1 = [MenuModel]()
     private var categoryArray = [MenuListItem]()
-    private var categoryArray1 = [CategoryModel]()
-    var menuID = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +91,6 @@ class ViewController: UIViewController {
                 do {
                     let decodeResponce = try JSONDecoder().decode(CategoryModel.self, from: data)
                     DispatchQueue.main.async {
-                        print(decodeResponce)
                         self.categoryArray = decodeResponce.menuList
                         self.collectionViewCategory.reloadData()
                     }
@@ -120,7 +116,6 @@ class ViewController: UIViewController {
                 do {
                     let decodeResponce = try JSONDecoder().decode(MenuModel.self, from: data)
                     DispatchQueue.main.async {
-                        print(decodeResponce)
                         self.menuArray = decodeResponce.menuList
                         self.collectionViewMenu.reloadData()
                     }

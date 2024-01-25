@@ -82,12 +82,12 @@ class MenuCollectionViewCell: UICollectionViewCell {
     private func setupViews() {
         backgroundColor = .black
         
-        self.addSubview(nameLabel)
-        self.addSubview(descriptionLabel)
-        self.addSubview(priceLabel)
-        self.addSubview(weightLabel)
-        self.addSubview(cellImageView)
-        self.addSubview(button)
+        addSubview(nameLabel)
+        addSubview(descriptionLabel)
+        addSubview(priceLabel)
+        addSubview(weightLabel)
+        addSubview(cellImageView)
+        addSubview(button)
     }
     
     func cellConfigure(model: MenuModelListItem) {
